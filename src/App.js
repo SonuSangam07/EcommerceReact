@@ -1,57 +1,24 @@
-import React from "react";
-
+import React,{useState} from "react";
+import CartProvider from "./components/store/CartProvider";
 import FrontPage from "./components/FrontPage/FinalPage";
-
+import Cart from "./components/Cart/Cart";
 function App() {
-  const Products = [
+  const [CartisShown, setCartShow] = useState(false);
 
-    {
-    
-    title: 'Colors',
-    
-    price: 100,
-    
-    imgsrc: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-    
-    },
-    
-    {
-    
-    title: 'Black and white Colors',
-    
-    price: 50,
-    
-    imgsrc: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-    
-    },
-    
-    {
-    
-    title: 'Yellow and Black Colors',
-    
-    price: 70,
-    
-    imgsrc: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-    
-    },
-    
-    {
-    
-    title: 'Blue Color',
-    
-    price: 100,
-    
-   imgsrc: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-    
-    }
-    
-    ]
+  const cartShowHandler = () => {
+    setCartShow(true);
+  };
+
+  const cartRemoveHandler = () => {
+    setCartShow(false);
+  };
     
     
   return (
-    <div>
-      <FrontPage products={Products}/>
-    </div>
+    <CartProvider>
+     <FrontPage cartFunc={cartShowHandler}/>
+      {CartisShown && <Cart cartFunc={cartRemoveHandler}/>}
+      </CartProvider>
   );
 }
 
