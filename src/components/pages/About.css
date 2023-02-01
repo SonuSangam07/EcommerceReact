@@ -1,0 +1,43 @@
+.subHeader {
+    height: 200px;
+    width: auto;
+    background-color: grey;
+    padding: 0px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 50px;
+    /* background-color: black; */
+    color: black;
+    margin: 1rem 45rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .pic {
+width: 500px;
+height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .para {
+    margin: 0 32rem;
+    justify-content: center;
+    font-size: 21px;
+    text-align: right;
+    width: 100rem;
+  }
