@@ -1,5 +1,10 @@
 .maindiv{
     display: flex;
+
+    flex-direction: column;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .detail-images{
