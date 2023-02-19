@@ -31,7 +31,12 @@ const CartProvider = (props) => {
 
   const decreaseQty = (name) => {};
 
-  const placingOrder = () => {};
+  const placingOrder = () => {
+    setItems([]);
+    alert(
+      "Order has been successfully placed !!!!, Keep shopping from the Biker Zone"
+    );
+  };
 
   const cartContext = {
     items: items,

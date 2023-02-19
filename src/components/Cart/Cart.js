@@ -8,7 +8,9 @@ import "./Cart.css";
 
 const Cart = (props) => {
     const cartctx = useContext(CartContext)
-
+    const placingOrder = () => {
+      cartctx.placingOrder()
+    }
   const Products = cartctx.items
   return (
     <Fragment>
@@ -24,7 +26,7 @@ const Cart = (props) => {
           <button className="button--alt" onClick={props.cartFunc}>
             Close
           </button>
-          <button className="order">Order</button>
+          <button className="order" onClick={placingOrder}>Order</button>
         </div>
       </Modal>
     </Fragment>
